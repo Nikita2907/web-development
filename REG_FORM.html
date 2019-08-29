@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Registration form</title>
+<h1><center>Registration form</center></h1>
+</head>
+<body bgcolor="#ffcccc">
+<marquee>AMITY UNIVERSITY KOLKATA</marquee>
+<form action="prog.php" method="post" enctype="txt/plain">
+Name:  <input type="text" name="name"><br>
+<br>
+Address: <textarea rows="4" cols="25"></textarea><br>
+<br>
+Gender: <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+Qualification:
+<input type="checkbox" name="qualification" value="no"> Graduation<br>
+<input type="checkbox" name="qualification" value="no"> P.G<br>
+<input type="checkbox" name="qualification" value="no"> Doctral<br>
+<input type="checkbox" name="qualification" value="no"> Diploma<br>
+
+City of Residence:   <select name="city">
+                     <option value="Kolkata">Kolkata</option>
+                     <option value="Delhi">Delhi</option>
+                     <option value="Hyderabad">Hyderabad</option>
+                     <option value="Bengaluru">Bengaluru</option>
+                     </select>
+<br>
+Preffered Location: <select name="location" size="4" multiple>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Bengaluru">Bengaluru</option>
+                    </select>
+
+<br>
+<input type="submit" value="Submit"><br><input type="reset" value="Clear">
+</form> 
+</body>
+</html>
