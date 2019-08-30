@@ -1,39 +1,69 @@
 <html>
 <head>
-<title>Registration form</title>
-<h1><center>Registration form</center></h1>
+<title>REGISTRATION FORM</title>
+<h1><center>REGISTRATION FORM</center></h1>
 </head>
-<body bgcolor="#ffcccc">
-<marquee>AMITY UNIVERSITY KOLKATA</marquee>
+<body style="background-color: #660066;color:white">
+<marquee><h3>AMITY UNIVERSITY KOLKATA</h3></marquee>
 <form action="prog.php" method="post" enctype="txt/plain">
-Name:  <input type="text" name="name"><br>
-<br>
-Address: <textarea rows="4" cols="25"></textarea><br>
-<br>
-Gender: <input type="radio" name="gender" value="male"> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br>
-Qualification:
+
+<table border="2" align="center" width="400">
+<tr>
+<th>Name</th>  
+<td><input type="text" name="name"></td>
+</tr>
+
+<tr>
+<th>Address</th>
+<td><textarea rows="4" cols="25"></textarea></td>
+</tr>
+
+<tr>
+<th>Gender</th>
+<td><input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female
+</td>
+</tr>
+
+<tr>
+<th>Qualification</th>
+<td>
 <input type="checkbox" name="qualification" value="no"> Graduation<br>
 <input type="checkbox" name="qualification" value="no"> P.G<br>
 <input type="checkbox" name="qualification" value="no"> Doctral<br>
 <input type="checkbox" name="qualification" value="no"> Diploma<br>
+</td>
+</tr>
 
-City of Residence:   <select name="city">
+<tr>
+
+<th>City of Residence</th>
+<td>   <select name="city">
                      <option value="Kolkata">Kolkata</option>
                      <option value="Delhi">Delhi</option>
                      <option value="Hyderabad">Hyderabad</option>
                      <option value="Bengaluru">Bengaluru</option>
                      </select>
-<br>
-Preffered Location: <select name="location" size="4" multiple>
+</td>
+</tr>
+
+<tr>
+<th>Preffered Location</th>
+<td> <select name="location" size="4" multiple>
                             <option value="Kolkata">Kolkata</option>
                             <option value="Delhi">Delhi</option>
                             <option value="Hyderabad">Hyderabad</option>
                             <option value="Bengaluru">Bengaluru</option>
                     </select>
 
-<br>
-<input type="submit" value="Submit"><br><input type="reset" value="Clear">
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" value="Submit">
+<input type="reset" value="Clear">
+</td>
+</tr>
+</table>
 </form> 
 </body>
 </html>
