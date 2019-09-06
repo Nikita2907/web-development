@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <h1>Calculator</h1>
+ </head>
+<body>
+ <form id="loginform">
+  Value1: <input name="val1" type="number" size="20"><br>
+  Value2: <input name="val2" type="number" size="20"><br>
+ </form>
+<table style="width=100%">
+ <tr>
+  <td><button onclick="add()" > Add </button></td>
+  <td><button onclick="sub()" > Substract </button></td>
+  <td><button onclick="mul()" > Multiply </button></td>
+  <td><button onclick="div()" > Divide </button></td>
+ </tr>
+</table>
+
+ <form id="AnsBox">
+  Answer: <input name="answer" type="text" size="20"> 
+ </form>
+
+ <script>
+  function add()
+  {
+   var form_set, value_1, value_2, ansBox_1;
+   form_set = document.getElementById("loginform");
+   value_1 = form_set.elements["val1"].value;
+   value_2 = form_set.elements["val2"].value;
+   ansBox_1 = document.getElementById("AnsBox");
+prompt(value_1 + value_2);
+   ansBox.value = value_1 + value_2;
+  }
+ </script>
+
+</body>
+</html>
