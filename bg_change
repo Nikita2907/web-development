@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function changeBodyBg(color){
+        document.body.style.background = color;
+    }
+    
+</script>
+</head>
+<body>
+    <h1>Change background colors by your choice!</h1>
+    <div>
+       <br>
+        <button type="button" onclick="changeBodyBg('yellow');">Yellow</button><br>
+        <button type="button" onclick="changeBodyBg('lime');">Lime</button><br>
+        <button type="button" onclick="changeBodyBg('orange');">Orange</button><br>
+    </div>
+    
+</body>
+</html>                            
