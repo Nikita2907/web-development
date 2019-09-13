@@ -1,0 +1,23 @@
+<html>
+<form name="country">
+<select id="sel">
+  <option value="India">India</option>
+  <option value="Sri Lanka">Sri Lanka</option>
+  <option value="Chinaa">China</option>
+</select>
+
+<input type="button" name="btn" value="show" onClick="show()";>
+<input type="text" name="t1">
+</form>
+<head>
+<script language="JavaScript">
+function show()
+{
+var e = document.getElementById("sel");
+var result = e.options[e.selectedIndex].value;
+//alert(result);
+document.forms[0].t1.value=result;
+}
+</script>
+</head>
+<html>
