@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>Vowels, Consonants and Numbers Counter</title>
+<style>
+body {
+ font-family:arial;
+	 font-size:12;
+	 font-weight:bold;
+ }
+</style>
+<script type="text/javascript">
+function count_all() {
+var str = document.getElementById('txtname').value;
+var count = 0, total_vowels="";
+var count2=0, total_consonants="";
+var count3=0, total_digits="";
+for (var i = 0; i < str.length; i++) {
+if (str.charAt(i).match(/[a-zA-Z]/) != null) {
+if (str.charAt(i).match(/[aeiouAEIOU]/))
+{
+total_vowels = total_vowels + str.charAt(i);
+count++;
+}
+if (str.charAt(i).match(/[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/))
+{
+total_consonants = total_consonants + str.charAt(i);
+count2++;
+}
+}
+function retnum(str1) { 
+var num = str1.replace(/[^0-9]/g, ''); 
+return num; 
+}
+function count_digits(str2) {
+ var num2 = str2.replace(/[^0-9]/g,"").length;
+ return num2;
+}
+}
+document.getElementById('consonant_counts').value = count2;
+document.getElementById('total_consonants').value = total_consonants;
+document.getElementById('vowels').value = total_vowels;
+document.getElementById('vcount').value = count;
+document.getElementById('digits1').value = count_digits(str);
+document.getElementById('digits2').value = retnum(str);
+}
+function clear_all()
+{
+document.getElementById('consonant_counts').value ="";
+document.getElementById('total_consonants').value ="";
+document.getElementById('vowels').value = "";
+document.getElementById('vcount').value = "";
+document.getElementById('digits1').value ="";
+document.getElementById('digits2').value ="";
+document.getElementById('txtname').value ="";
+document.getElementById('txtname').focus();
+}
+</script>
+</head>
+<body>
+<br><br>
+<div >
+<table border="0" cellspacing="0" width="40%" style="background-color:lightgreen; color:blue">
+<tr><td colspan="2" align="center"><b>Vowels, Consonants and Numbers Counter</b></td></tr>
+<tr> <td> </td></tr>
+<tr>
+<td>Enter a String </td>
+<td><input type='text' id='txtname' size="30" autofocus/></td>
+</tr>
+<tr> <td> </td></tr>
+<tr>
+<td>No. of Consonants </td>
+<td><input type='text' readonly="readonly" id='consonant_counts' size="30"/></td>
+</tr>
+<tr>
+<td>List of Consonant(s) </td>
+<td><input type='text' readonly="readonly" id='total_consonants' size="30"/></td>
+</tr>
+<tr>
+<td>No. of Vowels </td>
+<td><input type='text' readonly="readonly" id='vcount' size="30"/></td>
+</tr>
+<tr>
+<td>List of Vowel(s) </td>
+<td><input type='text' readonly="readonly" id='vowels' size="30"/></td>
+</tr>
+<tr>
+<td>No. of Digits </td>
+<td><input type='text' readonly="readonly" id='digits1' size="30"/></td>
+</tr>
+<td>List of Digit(s) </td>
+<td><input type='text' readonly="readonly" id='digits2' size="30"/></td>
+</tr>
+<tr> <td> </td></tr>
+<tr>
+<td></td>
+<td><input type='button' value='Ok' title="Click here to process." 
+onclick="javascript:count_all();" />
+   
+<input type='button' value='Clear' title="Click here to clear all the text fields."
+onclick="javascript:clear_all();" /></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
