@@ -1,0 +1,14 @@
+<html>
+<head>
+<h1>Formatting Styles</h1>
+</head>
+<body bgcolor="#ffcccc">
+<textarea rows="4" cols="25"></textarea>
+<select name="Font">
+                     <option value="Kolkata">Kolkata</option>
+                     <option value="Delhi">Delhi</option>
+                     <option value="Hyderabad">Hyderabad</option>
+                     <option value="Bengaluru">Bengaluru</option>
+                     </select>
+</body>
+</html>
