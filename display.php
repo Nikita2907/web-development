@@ -1,5 +1,5 @@
 <html>
-	<body>
+	<body bgcolor="#ffcccc">
 		<?php
 			$server="localhost";
 			$user="root";
@@ -14,10 +14,12 @@
 			$sql="SELECT * FROM employee";
 			$result=mysqli_query($conn,$sql);
 			if(mysqli_num_rows($result)>0)
-			{while($row=mysqli_fetch_assoc($result))
+			{   echo "<center><table border=2><tr><th>CODE</th><th>NAME</th><th>DEPARTMENT</th><th>DESIGNATION</th></tr>";
+				while($row=mysqli_fetch_assoc($result))
 			{
-				echo $row["emp_code"]." ".$row["emp_name"]."<br>";
+				echo "<tr><td>".$row["emp_code"]."</td><td>".$row["emp_name"]."</td><td>".$row["department"]."</td><td>".$row["designation"]."</td></tr>";
 			}
+			echo "</table></center>";
 			}
 			else
 			{
